@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>For Gauhar 💖</title>
+<title>Mohabbat ka Izhaar 💖</title>
 
 <style>
   body {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    background: linear-gradient(135deg, #ff9ad1, #ffd1e8, #ffe3f3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,27 +17,37 @@
     overflow: hidden;
   }
 
+  .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+  }
+
   .card {
-    background: white;
+    background: #fff7fb;
     padding: 25px;
     border-radius: 20px;
     text-align: center;
     width: 90%;
-    max-width: 360px;
+    max-width: 420px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     position: relative;
   }
 
   h1 {
     color: #ff4d6d;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     margin-bottom: 10px;
   }
 
   p {
-    color: #444;
+    color: #5a3c4d;
     font-size: 1rem;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   button {
@@ -50,22 +60,74 @@
   }
 
   #yes {
-    background: #ff4d6d;
+    background: #ff4d8b;
     color: white;
+    box-shadow: 0 6px 12px rgba(255, 77, 139, 0.3);
   }
 
   #no {
-    background: #ddd;
-    color: #333;
+    background: #ffe3ef;
+    color: #b24a74;
     position: absolute;
+  }
+
+  .no-zone {
+    position: relative;
+    width: 90%;
+    max-width: 420px;
+    height: 70px;
   }
 
   .message {
     display: none;
     margin-top: 20px;
     font-size: 1.1rem;
-    color: #ff4d6d;
+    color: #ff4d8b;
     animation: fadeIn 1s ease-in;
+  }
+
+  .shayri {
+    background: #ffe8f4;
+    border-radius: 14px;
+    padding: 12px;
+    font-style: italic;
+    color: #b24a74;
+    margin-bottom: 18px;
+  }
+
+  .proposal {
+    font-weight: bold;
+    color: #ff4d8b;
+  }
+
+  .photo-collage {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .photo {
+    position: absolute;
+    width: 180px;
+    height: 230px;
+    border-radius: 18px;
+    object-fit: contain;
+    background: #fff;
+    border: 6px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 12px 28px rgba(255, 77, 139, 0.25);
+    opacity: 0.85;
+    padding: 6px;
+  }
+
+  .photo.one { top: 4%; left: 4%; transform: rotate(-6deg); }
+  .photo.two { top: 8%; right: 6%; transform: rotate(5deg); }
+  .photo.three { bottom: 6%; left: 8%; transform: rotate(4deg); }
+  .photo.four { bottom: 4%; right: 8%; transform: rotate(-5deg); }
+
+  .card {
+    z-index: 1;
   }
 
   @keyframes fadeIn {
@@ -89,17 +151,35 @@
 
 <body>
 
-<div class="card">
-  <h1>Gauhar 💖</h1>
-  <p>Will you be my Valentine?</p>
+<div class="photo-collage">
+  <img class="photo one" src="https://raw.githubusercontent.com/isaqedeshmukh/Gauhar_Valentine/main/WhatsApp%20Image%202026-01-17%20at%205.58.41%20AM.jpeg" alt="Gauhar photo 1">
+  <img class="photo two" src="https://raw.githubusercontent.com/isaqedeshmukh/Gauhar_Valentine/main/WhatsApp%20Image%202026-01-22%20at%204.12.06%20PM.jpeg" alt="Gauhar photo 2">
+  <img class="photo three" src="https://raw.githubusercontent.com/isaqedeshmukh/Gauhar_Valentine/main/WhatsApp%20Image%202026-01-31%20at%207.10.57%20PM%20(1).jpeg" alt="Gauhar photo 3">
+  <img class="photo four" src="https://raw.githubusercontent.com/isaqedeshmukh/Gauhar_Valentine/main/WhatsApp%20Image%202026-01-31%20at%207.10.57%20PM.jpeg" alt="Gauhar photo 4">
+</div>
 
-  <button id="yes">Yes 💕</button>
-  <button id="no">No 😜</button>
+<div class="content">
+  <div class="card">
+    <h1>Kya aap baaki ki zindagi mere saath guzarna chahoge? 💖</h1>
+    <div class="shayri">
+      "Aap ki muskaan se mehka har pal,<br>
+      Aap hi se hai meri har subah, har kal,<br>
+      Saath nibhayein hum yeh waada rahe sada,<br>
+      Aap hi meri mohabbat, aap hi meri dua."
+    </div>
+    <p class="proposal">Hum engaged hain, ab bas shaadi ka vaada pakka karein?</p>
 
-  <div class="message" id="loveMessage">
-    💘 Yayyyy! <br><br>
-    Gauhar, you just made my heart the happiest 💞 <br>
-    Forever starts with this <b>YES</b> ✨
+    <button id="yes">Yes, hamesha 💕</button>
+
+    <div class="message" id="loveMessage">
+      Tumhari "YES" ne meri duniya roshan kar di 💞<br>
+      Bas ab ek pyara sa kiss tumhare naam 💋💘<br>
+      Hamesha ke liye, sirf tum aur main ✨
+    </div>
+  </div>
+
+  <div class="no-zone">
+    <button id="no">Ye option nhi hai 🙈</button>
   </div>
 </div>
 
@@ -109,8 +189,11 @@
   const noBtn = document.getElementById("no");
 
   function moveNo() {
-    const x = Math.random() * (window.innerWidth - 100);
-    const y = Math.random() * (window.innerHeight - 100);
+    const noZone = document.querySelector(".no-zone");
+    const maxX = noZone.clientWidth - noBtn.offsetWidth;
+    const maxY = noZone.clientHeight - noBtn.offsetHeight;
+    const x = Math.max(0, Math.random() * maxX);
+    const y = Math.max(0, Math.random() * maxY);
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
   }
