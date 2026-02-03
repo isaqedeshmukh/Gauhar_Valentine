@@ -17,6 +17,16 @@
     overflow: hidden;
   }
 
+  .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+  }
+
   .card {
     background: #fff7fb;
     padding: 25px;
@@ -59,6 +69,13 @@
     background: #ffe3ef;
     color: #b24a74;
     position: absolute;
+  }
+
+  .no-zone {
+    position: relative;
+    width: 90%;
+    max-width: 420px;
+    height: 70px;
   }
 
   .message {
@@ -167,8 +184,11 @@
   const noBtn = document.getElementById("no");
 
   function moveNo() {
-    const x = Math.random() * (window.innerWidth - 100);
-    const y = Math.random() * (window.innerHeight - 100);
+    const noZone = document.querySelector(".no-zone");
+    const maxX = noZone.clientWidth - noBtn.offsetWidth;
+    const maxY = noZone.clientHeight - noBtn.offsetHeight;
+    const x = Math.max(0, Math.random() * maxX);
+    const y = Math.max(0, Math.random() * maxY);
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
   }
